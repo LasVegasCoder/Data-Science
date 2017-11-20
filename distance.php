@@ -24,6 +24,7 @@ function distance( $p1=array(), $p2=array())
         
         OUTPUT : 4.2426406871193
         
+        Live DEMO at https://3v4l.org/HdVWn
     */
     $x1 = $p1[0];
     $x2 = $p2[0];
