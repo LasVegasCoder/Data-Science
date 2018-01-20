@@ -1,13 +1,4 @@
 <?php
-
-$d = distance([1,1], [4,4]);
-
-echo 'distance is : ' .$d;
-
-
-
-function distance( $p1=array(), $p2=array())
-{
     /**
         The distance formula is derived from the Pythagorean theorem.
         To find the distance between two points (x1,y1) and (x2,y2), 
@@ -25,7 +16,17 @@ function distance( $p1=array(), $p2=array())
         OUTPUT : 4.2426406871193
         
         Live DEMO at https://3v4l.org/HdVWn
+        @Author: Prince Adeyemi
     */
+
+$d = distance([1,1], [4,4]);
+
+echo 'distance is : ' .$d;
+
+
+
+function distance( $p1=array(), $p2=array())
+{
     $x1 = $p1[0];
     $x2 = $p2[0];
     
