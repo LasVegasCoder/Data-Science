@@ -15,7 +15,7 @@
         
         OUTPUT : 4.2426406871193
         
-        Live DEMO at https://3v4l.org/HdVWn
+        Live DEMO at https://3v4l.org/0tUC7
         @Author: Prince Adeyemi
     */
 
