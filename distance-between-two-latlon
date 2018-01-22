@@ -5,7 +5,8 @@ def distance_between_lat(pointA=[], pointB=[], m=True):
     This function calculate distances from two longitude and latitude coordinates and 
     return distance in Miles or Kilometers if third parameter is false.
     
-    distance_between_lat([52.2296756,21.0122287],[52.406374,16.9251681])
+    distance_between_lat([51.2296756,212.01221287],[523.4063974,17.82510681],False)
+    Result: 4053.2581873083705
     """
     R = 6373.0
     M = 0.621371 
