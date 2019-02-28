@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/*
+  Distance Calculator 
+*/
+
+struct point{
+    double x1;
+    double x2;
+    
+    double y1;
+    double y2;
+    
+    struct point *next;
+};
+
+struct point *createPoints(double x1, double x2, double y1, double y2);
+double calculate_distance( struct point *pt);
+
+int  main(void){
+    struct point *waypoint;
+    double distance, x1,x2, y1, y2;
+	
+    /* Make it interactive */
+    printf("Enter Point X1 : ");
+    scanf("%lf", &x1);
+    
+    printf("Enter Point X2 : ");
+    scanf("%lf", &x2);
+    printf("\n");
+    printf("Enter Point Y1 : ");
+    scanf("%lf", &y1);
+    
+    printf("Enter Point Y2 : ");
+    scanf("%lf", &y2);
+    
+    waypoint = createPoints(x1, x2, y1, y2);
+    
+    printf("\n");
+    printf("****************************************************\n");
+	
+    printf("X1 is %.2lf, X2 is %.2lf, Y1 is %.2lf, Y2 is %.2lf\n", waypoint->x1, waypoint->x2, waypoint->y1, waypoint->y2);
+    printf("PointX is (%.2lf, %.2lf) and PointY is (%.2lf, %.2lf) \n", waypoint->x2, waypoint->x1, waypoint->y2, waypoint->y1);
+    
+    /* Calculate the distance between the two waypoints of X and Y using the Pantegorem theorem */
+    distance = calculate_distance(waypoint);
+    printf("Distance between PointX and PointY is %lf\n", distance);
+    
+    return 0;
+}
+
+double calculate_distance( struct point *pt){
+   // struct point *pt = ptr;
+    double distance;
+    distance = sqrt((pt->x2 - pt->x1) * (pt->x2 - pt->x1) + (pt->y2 - pt->y1) * (pt->y2 - pt->y1));
+    
+    return distance;
+}
+
+struct point *createPoints(double x1, double x2, double y1, double y2){
+    struct point *pt;
+    pt = (struct point *) malloc(sizeof(struct point ));
+    pt->x1 = x1;
+    pt->x2 = x2;
+    
+    pt->y1 = y1;
+    pt->y2 = y2;
+    pt->next = NULL;
+	
+	return pt;
+}
+
