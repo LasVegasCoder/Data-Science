@@ -1,7 +1,4 @@
-import numpy as np
-
-def find_nearest_neighbors(p, points, k=5):
-    """ 
+""" 
     Find the k nearest neighbors of points and return the indexes of nearest neigbor k
     usage: 
         //Generate points.
@@ -17,8 +14,11 @@ def find_nearest_neighbors(p, points, k=5):
         OUTPUT:  
             [[2 2]
             [3 2]]
-    """
-    
+"""
+
+import numpy as np
+
+def find_nearest_neighbors(p, points, k=5):    
     distances = np.zeros(points.shape[0])
     #loop through
     for i in range(len(distances)):
